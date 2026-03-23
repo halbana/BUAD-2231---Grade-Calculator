@@ -19,10 +19,12 @@ export const generateMessage = async (currentPoints: number, maxPossibleGrade: s
         } else if (currentPercentage >= 80) {
             prompt = `Act as a proud but realistic college professor for BUAD 2231. A student has earned ${currentPoints} out of ${POINTS_DISTRIBUTED} points, a strong performance. Their highest possible grade is an ${maxPossibleGrade}. Write a very compact, complimentary message (1-2 sentences). Acknowledge their excellent work, but encourage them to stay focused, as the remaining ${POINTS_REMAINING} points are crucial for securing a top grade. Keep the tone positive and motivating.`;
         } else {
-            prompt = `Act as a supportive and direct college professor for BUAD 2231. A student has earned ${currentPoints} out of ${POINTS_DISTRIBUTED} points, and their highest possible grade is a ${maxPossibleGrade}. The final ${POINTS_REMAINING} points are a significant opportunity. Write a compact, motivational message. Briefly acknowledge their current standing, then provide these specific suggestions as a bulleted list:
-* Make sure not to miss any class meetings and SIMnet activities.
+            const lowPerformanceAdvice = currentPercentage < 70 ? " Since their current performance is below 70%, specifically encourage them to connect with you (the instructor) to get help in gaining a better understanding of the course materials." : "";
+            prompt = `Act as a supportive and direct college professor for BUAD 2231. A student has earned ${currentPoints} out of ${POINTS_DISTRIBUTED} points, and their highest possible grade is a ${maxPossibleGrade}. The final ${POINTS_REMAINING} points are a significant opportunity. Write a compact, motivational message.${lowPerformanceAdvice} Briefly acknowledge their current standing, then provide these specific suggestions as a bulleted list:
+* Make sure not to miss any class meetings and Connect activities.
 * Try to maximize points from every remaining activity.
-* Finish all SIMnet activities before taking the exam.
+* Finish all Connect activities before taking the exam.
+* Reach out to the instructor if you need help understanding the course materials.
 End with a brief, encouraging sentence about finishing the semester strong. The tone should be direct but hopeful.`;
         }
 
