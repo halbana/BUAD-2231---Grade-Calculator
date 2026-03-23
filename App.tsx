@@ -74,8 +74,11 @@ const App: React.FC = () => {
   return (
     <div className="min-h-screen container mx-auto p-4 md:p-8">
       <header className="text-center mb-8">
-        <h1 className="text-4xl md:text-5xl font-bold text-indigo-600">BUAD 2231 - Business Statistics I</h1>
-        <p className="text-lg text-slate-500 mt-1">As of 3/14/2026</p>
+        <h1 className="text-4xl md:text-5xl font-bold text-indigo-600">
+          BUAD 2231<br />
+          Business Statistics I
+        </h1>
+        <p className="text-lg text-slate-500 mt-1">As of 3/23/2026</p>
         <p className="text-xl text-slate-600 mt-2">Final Grade Potential Calculator</p>
         <a
           href="mailto:halbana.tarmizi@bemidjistate.edu?subject=BUAD%202231%20-%20Question"
