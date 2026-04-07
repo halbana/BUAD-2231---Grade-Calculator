@@ -78,7 +78,7 @@ const App: React.FC = () => {
           BUAD 2231<br />
           Business Statistics I
         </h1>
-        <p className="text-lg text-slate-500 mt-1">As of 4/2/2026</p>
+        <p className="text-lg text-slate-500 mt-1">As of 4/7/2026</p>
         <p className="text-xl text-slate-600 mt-2">Final Grade Potential Calculator</p>
         <a
           href="mailto:halbana.tarmizi@bemidjistate.edu?subject=BUAD%202231%20-%20Question"
