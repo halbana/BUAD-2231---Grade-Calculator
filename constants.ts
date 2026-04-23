@@ -1,7 +1,7 @@
 
 export const TOTAL_CLASS_POINTS = 930;
-export const POINTS_DISTRIBUTED = 690;
-export const POINTS_REMAINING = 240;
+export const POINTS_DISTRIBUTED = 700;
+export const POINTS_REMAINING = 230;
 
 export const GRADE_THRESHOLDS = {
   A: { percentage: 0.9, points: TOTAL_CLASS_POINTS * 0.9 }, // 495
