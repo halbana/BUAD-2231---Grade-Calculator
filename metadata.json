@@ -1,5 +1,8 @@
 {
   "name": "BUAD 2231 Grade Calculator",
   "description": "A grade calculator for students in BUAD 2231 Business Statistics I to determine their potential final grade and receive personalized feedback.",
-  "requestFramePermissions": []
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
 }
