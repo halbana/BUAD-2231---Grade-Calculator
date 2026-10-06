@@ -6,6 +6,7 @@ export interface GradeScenario {
   isPossible: boolean;
   pointsNeeded: number;
   threshold: number;
+  pointsRemaining: number;
 }
 
 export interface CalculationResult {
@@ -14,4 +15,6 @@ export interface CalculationResult {
   maxPossibleGrade: Grade;
   scenarios: GradeScenario[];
   currentPercentage: number;
+  pointsDistributed: number;
+  pointsRemaining: number;
 }

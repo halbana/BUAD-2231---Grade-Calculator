@@ -1,7 +1,6 @@
 
 import React from 'react';
 import type { GradeScenario } from '../types';
-import { POINTS_REMAINING } from '../constants';
 import { CheckCircleIcon, XCircleIcon } from './Icons';
 
 interface GradeCardProps {
@@ -9,7 +8,7 @@ interface GradeCardProps {
 }
 
 const GradeCard: React.FC<GradeCardProps> = ({ scenario }) => {
-  const { grade, isPossible, pointsNeeded } = scenario;
+  const { grade, isPossible, pointsNeeded, pointsRemaining } = scenario;
 
   const cardClasses = isPossible
     ? 'bg-green-50 border-green-200'
@@ -18,7 +17,7 @@ const GradeCard: React.FC<GradeCardProps> = ({ scenario }) => {
   const iconClasses = isPossible ? 'text-green-500' : 'text-red-500';
 
   const renderContent = () => {
-    if (pointsNeeded < 0) {
+    if (pointsNeeded <= 0) {
       return (
         <p className="text-sm text-slate-600">
           You've already surpassed the points needed for this grade. Great job!
@@ -28,13 +27,13 @@ const GradeCard: React.FC<GradeCardProps> = ({ scenario }) => {
     if (isPossible) {
       return (
         <p className="text-sm text-slate-600">
-          You need to earn at least <strong className="font-bold text-slate-800">{pointsNeeded}</strong> out of the remaining {POINTS_REMAINING} points.
+          You need to earn at least <strong className="font-bold text-slate-800">{pointsNeeded}</strong> out of the remaining {pointsRemaining} points.
         </p>
       );
     }
     return (
       <p className="text-sm text-slate-600">
-        It's no longer possible to achieve this grade. You would have needed <strong className="font-bold text-slate-800">{pointsNeeded}</strong> points, but only {POINTS_REMAINING} are left.
+        It's no longer possible to achieve this grade. You would have needed <strong className="font-bold text-slate-800">{pointsNeeded}</strong> points, but only {pointsRemaining} are left.
       </p>
     );
   };
